@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b0e">
+  <title>Guerra de Territórios</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game">
+    <header class="topbar">
+      <div class="brand">
+        GUERRA DE TERRITÓRIOS
+        <span id="status">Pronto para iniciar</span>
+      </div>
+
+      <div id="scores" class="scores" aria-live="polite"></div>
+
+      <div class="controls">
+        <button id="startButton" class="primary">Iniciar</button>
+        <button id="pauseButton">Pausar</button>
+        <button id="resetButton">Reiniciar</button>
+
+        <label class="speed-control">
+          <span>Velocidade</span>
+          <select id="speedSelect" aria-label="Velocidade da partida">
+            <option value="1">1×</option>
+            <option value="1.5">1,5×</option>
+            <option value="2">2×</option>
+          </select>
+        </label>
+      </div>
+    </header>
+
+    <canvas id="gameCanvas" aria-label="Jogo Guerra de Territórios"></canvas>
+
+    <section id="resultDialog" class="result-dialog" aria-live="assertive">
+      <h1 id="resultTitle">Vitória!</h1>
+      <p id="resultText"></p>
+      <button id="playAgainButton" class="primary">Jogar novamente</button>
+    </section>
+
+    <footer class="help">
+      Bolinhas nos multiplicadores viram munição na hora. Pela brecha central, vão para o reforço da torre.
+    </footer>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
